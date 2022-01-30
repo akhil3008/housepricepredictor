@@ -19,11 +19,13 @@ import os
 import seaborn as sns
 import numpy as np
 import matplotlib as plt
-import joblib
+
+# import joblib
 
 spark_session = SparkSession.builder.master("local[2]").appName("HousingRegression").getOrCreate()
 spark_context = spark_session.sparkContext
 spark_sql_context = SQLContext(spark_context)
+
 
 def getData():
     # for dirname, _, filenames in os.walk('/data'):
@@ -35,13 +37,13 @@ def getData():
     # #train_df.rdd.saveAsPickleFile("train_df.pkl")
     # train_df.rdd.saveAsPickleFile("/")
     train_df = pd.read_csv("train.csv")
-    joblib.dump(train_df, 'train_df.sav')
 
 
 # Read the datasets
 
+
 def predict():
-    train_df = spark_session.read.option('header', 'true').csv(os.path.join('', 'train.csv'), inferSchema = True)
+    train_df = spark_session.read.option('header', 'true').csv(os.path.join('', 'train.csv'), inferSchema=True)
 
     # pickleRdd = sc.pickleFile(filename).collect()
     # df2 = spark.createDataFrame(pickleRdd)
@@ -60,7 +62,6 @@ def predict():
         if item[1] == 'string':
             l_str.append(item[0])
     print("String", l_str)
-
 
     # This is how fillna is done in PySpark
 
@@ -86,7 +87,6 @@ def predict():
                              'MiscVal', 'Alley'])
     df_new = df_new.drop(*['Id'])
     # now we have the clean data to work
-
 
     # Housing prices greater than 500,000 (expensive houses)
     # print("No of houses: %i" % train_df.select('SalePrice').count())
@@ -123,7 +123,6 @@ def predict():
     # print(df_feat.show(10))
 
     # using above code we have converted list of features into indexes
-
 
     # we will convert below columns into features to work with
     assembler = VectorAssembler(inputCols=['MSSubClass', 'LotArea', 'OverallQual',
