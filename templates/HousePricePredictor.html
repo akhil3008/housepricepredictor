@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <title>House Price App</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/responsive.css') }}">
+      <link rel="icon" href="{{ url_for('static', filename='images/fevicon.png') }}" type="image/gif" />
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.mCustomScrollbar.min.css') }}">
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+   </head>
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="{{ url_for('static', filename='images/loading.gif') }}" alt="#" /></div>
+      </div>
+      <header>
+
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo" style="width:550px;">
+                              <a href="#"  ><span style="color: #55236d; font-size: 52px; font-weight: bold;">House Price App</span></a>
+                              <hr style="height:2px;border-width:10px;color:#55236d;;background-color:#55236d;">
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <div  class="about">
+         </div>
+         <div class="container">
+            <form action="{{ url_for('predict')}}" method="post" class="main_form">
+            <div class="row d_flex">
+               <div class="col-md-5 ">
+                   <input class="predict" placeholder="MSSubClass" type="type" name="MSSubClass" id="MSSubClass">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="MSZoning" type="type" name="MSZoning" id="MSZoning">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="LotFrontage" type="type" name="LotFrontage" id="LotFrontage">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="LotArea" type="type" name="LotArea" id="LotArea">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Street" type="type" name="Street" id="Street">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="LotShape" type="type" name="LotShape" id="LotShape">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="LandContour" type="type" name="LandContour" id="LandContour">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Utilities" type="type" name="Utilities" id="Utilities">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="LotConfig" type="type" name="LotConfig" id="LotConfig">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="LandSlope" type="type" name="LandSlope" id="LandSlope">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Neighborhood" type="type" name="Neighborhood" id="Neighborhood">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Condition1" type="type" name="Condition1" id="Condition1">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Condition2" type="type" name="Condition2" id="Condition2">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="BldgType" type="type" name="BldgType" id="BldgType">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="HouseStyle" type="type" name="HouseStyle" id="HouseStyle">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="OverallQual" type="type" name="OverallQual" id="OverallQual">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="OverallCond" type="type" name="OverallCond" id="OverallCond">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="YearBuilt" type="type" name="YearBuilt" id="YearBuilt">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="YearRemodAdd" type="type" name="YearRemodAdd" id="YearRemodAdd">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="RoofStyle" type="type" name="RoofStyle" id="RoofStyle">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="RoofMatl" type="type" name="RoofMatl" id="RoofMatl">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Exterior1st" type="type" name="Exterior1st" id="Exterior1st">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Exterior2nd" type="type" name="Exterior2nd" id="Exterior2nd">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="MasVnrType" type="type" name="MasVnrType" id="MasVnrType">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="MasVnrArea" type="type" name="MasVnrArea" id="MasVnrArea">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="ExterQual" type="type" name="ExterQual" id="ExterQual">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="ExterCond" type="type" name="ExterCond" id="ExterCond">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Foundation" type="type" name="Foundation" id="Foundation">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="BsmtQual" type="type" name="BsmtQual" id="BsmtQual">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="BsmtCond" type="type" name="BsmtCond" id="BsmtCond">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="BsmtExposure" type="type" name="BsmtExposure" id="BsmtExposure">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="BsmtFinType1" type="type" name="BsmtFinType1" id="BsmtFinType1">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="BsmtFinSF1" type="type" name="BsmtFinSF1" id="BsmtFinSF1">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="BsmtFinType2" type="type" name="BsmtFinType2" id="BsmtFinType2">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="BsmtUnfSF" type="type" name="BsmtUnfSF" id="BsmtUnfSF">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="TotalBsmtSF" type="type" name="TotalBsmtSF" id="TotalBsmtSF">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Heating" type="type" name="Heating" id="Heating">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="HeatingQC" type="type" name="HeatingQC" id="HeatingQC">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="CentralAir" type="type" name="CentralAir" id="CentralAir">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Electrical" type="type" name="Electrical" id="Electrical">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="1stFlrSF" type="type" name="1stFlrSF" id="1stFlrSF">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="2ndFlrSF" type="type" name="2ndFlrSF" id="2ndFlrSF">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="GrLivArea" type="type" name="GrLivArea" id="GrLivArea">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="BsmtFullBath" type="type" name="BsmtFullBath" id="BsmtFullBath">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="FullBath" type="type" name="FullBath" id="FullBath">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="HalfBath" type="type" name="HalfBath" id="HalfBath">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="BedroomAbvGr" type="type" name="BedroomAbvGr" id="BedroomAbvGr">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="KitchenAbvGr" type="type" name="KitchenAbvGr" id="KitchenAbvGr">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="KitchenQual" type="type" name="KitchenQual" id="KitchenQual">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="TotRmsAbvGrd" type="type" name="TotRmsAbvGrd" id="TotRmsAbvGrd">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="Functional" type="type" name="Functional" id="Functional">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="Fireplaces" type="type" name="Fireplaces" id="Fireplaces">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="FireplaceQu" type="type" name="FireplaceQu" id="FireplaceQu">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="GarageType" type="type" name="GarageType" id="GarageType">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="GarageYrBlt" type="type" name="GarageYrBlt" id="GarageYrBlt">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="GarageFinish" type="type" name="GarageFinish" id="GarageFinish">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="GarageCars" type="type" name="GarageCars" id="GarageCars">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="GarageArea" type="type" name="GarageArea" id="GarageArea">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="GarageQual" type="type" name="GarageQual" id="GarageQual">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="GarageCond" type="type" name="GarageCond" id="GarageCond">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="PavedDrive" type="type" name="PavedDrive" id="PavedDrive">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="WoodDeckSF" type="type" name="WoodDeckSF" id="WoodDeckSF">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="OpenPorchSF" type="type" name="OpenPorchSF" id="OpenPorchSF">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="MoSold" type="type" name="MoSold" id="MoSold">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="YrSold" type="type" name="YrSold" id="YrSold">
+               </div>
+               <div class="col-md-5 offset-md-1">
+                  <input class="predict" placeholder="SaleType" type="type" name="SaleType" id="SaleType">
+               </div>
+                <div class="col-md-5 ">
+                   <input class="predict" placeholder="SaleCondition" type="type" name="SaleCondition" id="SaleCondition">
+               </div>
+
+
+               <div class="col-md-12">
+                  <button type="submit" class="send_btn" >Submit</button>
+               </div>
+                <div class="row">
+                    <label class="predict">Prediction: {{ prediction_text }}</label>
+
+               </div>
+<!--                <div class="col-md-12 offset-md-1">-->
+<!--                    <label class="predict">Do you wish to update prediction </label>-->
+<!--                    <button type="submit" class="send_btn" >Yes</button>-->
+<!--                    <button type="submit" class="send_btn" >No</button>-->
+<!--               </div>-->
+            </div>
+         </form>
+
+         </div>
+      </div>
+      <!-- end about -->
+
+
+      <!-- Javascript files-->
+      <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/jquery-3.0.0.min.js') }}"></script>
+      <!-- sidebar -->
+      <script src="{{ url_for('static', filename='js/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+   </body>
+</html>
+
